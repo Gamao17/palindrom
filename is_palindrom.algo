@@ -1,6 +1,6 @@
-FUNCTION is_palindrom(str : STRING, i : INTEGER) : BOOLEAN
+FUNCTION is_palindrom(str : STRING) : BOOLEAN
 VAR
-    j , n : INTEGER; 
+    i, j , n : INTEGER; 
 BEGIN
     n := str.lengt;
     j = str.lengt-i-1;
@@ -11,7 +11,7 @@ FOR i FROM 0 TO n/2 STEP 1  DO
     ELSE_IF (str[i] <> str[j]) THEN
         FALSE;
     ELSE
-        return is_palindrom(str,i)
+        return is_palindrom(str)
 END_IF
 END_FOR
 
